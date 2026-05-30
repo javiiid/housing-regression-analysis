@@ -1,2 +1,133 @@
-# housing-regression-analysis
-End-to-end housing price prediction: EDA, preprocessing, modeling, evaluation, and reporting. Regression analysis and ML models for housing price prediction with full evaluation and plots. Housing price ML project with clean pipeline, metrics, and visual diagnostics.
+# Housing Price Regression Project
+
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+
+---
+
+## 🔍 معرفی پروژه
+
+این پروژه یک مدل رگرسیون برای پیش‌بینی قیمت خانه‌ها بر اساس ویژگی‌های مختلف است. هدف، توسعه، ارزیابی و مقایسه چندین مدل رگرسیون شامل رگرسیون خطی، Ridge، Lasso، درخت تصمیم و جنگل تصادفی است تا بهترین مدل را برای داده‌های مسکن بیابیم.
+
+---
+
+## 🗂️ ساختار پروژه
+
+```
+housing-regression/
+│
+├── data/
+│   ├── raw/                 # داده‌های خام
+│   ├── processed/           # داده‌های پردازش شده (train/test)
+│
+├── src/
+│   ├── __init__.py          # تعریف پکیج و کانفیگ کلی
+│   ├── Config.py            # پارامترهای کانفیگوریشن پروژه
+│   ├── data_processing.py   # اسکریپت‌های پیش‌پردازش داده‌ها
+│   ├── modeling.py          # مدل سازی و ارزیابی مدل‌ها
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb  # تحلیل و بررسی داده‌ها
+│   ├── 02_feature_engineering.ipynb # مهندسی ویژگی‌ها و پردازش
+│   ├── 03_modeling.ipynb           # آموزش، ارزیابی و مقایسه مدل‌ها
+│
+├── README.md               # همین فایل راهنما
+├── requirements.txt        # لیست کتابخانه‌های مورد نیاز
+└── .gitignore              # فایل‌های نادیده گرفته شده توسط git
+```
+
+---
+
+## 🛠️ نصب و راه‌اندازی
+
+### پیش‌نیازها
+
+- Python 3.8 یا بالاتر
+- pip
+
+### مراحل نصب
+
+```bash
+git clone https://github.com/yourusername/housing-regression.git
+cd housing-regression
+pip install -r requirements.txt
+```
+
+---
+
+## 🚀 نحوه استفاده
+
+### 1. بارگذاری داده‌ها
+
+اطمینان حاصل کنید که داده‌های متنی پردازش شده در مسیر `data/processed/` موجود باشد.
+
+### 2. اجرای مدل‌سازی
+
+می‌توانید نوت‌بوک `03_modeling.ipynb` را اجرا کنید که مدل‌ها را آموزش داده و ارزیابی می‌کند:
+
+- یا از خط فرمان با اجرای اسکریپت پایتون (در صورت موجود بودن):
+
+```bash
+python src/modeling.py
+```
+
+### 3. مشاهده نتایج
+
+نتایج ارزیابی مدل‌ها شامل معیارهایی مثل MAE، RMSE و R2 در خروجی نمایش داده می‌شود.
+
+---
+
+## 📊 مدل‌ها و روش‌ها
+
+- **Linear Regression** — مدل پایه خطی
+- **Ridge Regression** — رگرسیون خطی با تنظیم منظم‌کننده‌ی L2
+- **Lasso Regression** — رگرسیون خطی با تنظیم منظم‌کننده‌ی L1 (کاهش ویژگی‌ها)
+- **Decision Tree Regressor** — درخت تصمیم برای رگرسیون
+- **Random Forest Regressor** — جنگل تصادفی به عنوان مجموعه‌ای از درختان تصمیم
+
+---
+
+## 🧪 ارزیابی مدل‌ها
+
+از معیارهای زیر برای سنجش عملکرد مدل‌ها استفاده شده است:
+
+| معیار       | شرح                                  |
+|-------------|--------------------------------------|
+| MAE         | میانگین قدر مطلق خطا                 |
+| RMSE        | ریشه میانگین مربع خطا                |
+| R2 (R-Squared) | ضریب تعیین برای سنجش دقت مدل      |
+
+---
+
+## 🎯 توسعه و گسترش پروژه
+
+- افزودن مدل‌های پیشرفته‌تر مانند XGBoost، LightGBM، یا مدل‌های مبتنی بر شبکه‌های عصبی عمیق
+- اجرای بهینه‌سازی هایپرپارامترها با استفاده از GridSearchCV یا RandomizedSearchCV
+- توسعه رابط کاربری ساده یا API برای پیش‌بینی قیمت خانه‌ها
+- استفاده از تکنیک‌های مهندسی ویژگی (Feature Engineering) پیشرفته‌تر و تحلیل داده عمیق‌تر
+- افزودن گزارش‌های تصویری و داشبوردهای تعاملی برای تسهیل تحلیل نتایج
+
+---
+
+## 📚 مراجع و منابع
+
+- [scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [Pandas Documentation](https://pandas.pydata.org/)
+- [Matplotlib Documentation](https://matplotlib.org/)
+
+---
+
+## ⚖️ لایسنس
+
+این پروژه تحت مجوز MIT منتشر شده است.  
+برای اطلاعات بیشتر به فایل LICENSE رجوع کنید.
+
+---
+
+## 🤝 همکاری
+
+بازخورد، سوال یا پیشنهاد به شدت خوش‌آمد است!  
+برای ارتباط: your.email@example.com
+
+---
+
+_موفق باشید و پروژه‌ی خوش‌قیمتی داشته باشید!_ 🙂
